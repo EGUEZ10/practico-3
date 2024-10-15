@@ -1,0 +1,83 @@
+/* Estilos generales del formulario */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Fondo del formulario en modo claro */
+    transition: background-color 0.3s, border-color 0.3s; /* Transición suave */
+}
+
+/* Títulos del formulario */
+.formulario-contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los campos del formulario */
+.campo {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.campo ion-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999; /* Color de ícono por defecto */
+    font-size: 20px; /* Tamaño del icono */
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Espacio a la izquierda para el ícono */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s; /* Transición suave en borde */
+}
+
+/* Estilos para el textarea */
+.campo textarea {
+    resize: vertical; /* Permitir que el textarea se redimensione verticalmente */
+    min-height: 100px; /* Altura mínima para el textarea */
+}
+
+/* Estilos para el botón de enviar */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #25e1fa;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1aa1b4;
+}
+
+/* Estilos para modo oscuro */
+.dark-mode .formulario-contacto {
+    background-color: #333; /* Fondo del formulario en modo oscuro */
+    border-color: #444; /* Color del borde en modo oscuro */
+}
+
+.dark-mode .campo ion-icon {
+    color: #f9f9f9; /* Color de ícono en modo oscuro */
+}
+
+.dark-mode .campo input,
+.dark-mode .campo textarea {
+    border: 1px solid #444; /* Borde de entrada en modo oscuro */
+    background-color: #555; /* Fondo de entrada en modo oscuro */
+    color: #f9f9f9; /* Color de texto de entrada en modo oscuro */
+}
+
+

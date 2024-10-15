@@ -1,0 +1,587 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+
+:root{
+    --color-barra-lateral:rgb(255, 255, 255);
+
+    --color-texto:rgb(0,0,0);
+    --color-texto-menu:rgb(134,136,144);
+
+
+    --color-menu-hover: rgb(238,238,238);
+    --color-menu-hover-text: rgb(0,0,0);
+
+    --color-boton:rgb(0,0,0);
+    --color-boton-texto:rgb(255,255,255);
+
+    --color-linea: rgb(180,180,180);
+
+    --color-switch-base:rgb(201,202,206);
+    --color-switch-circulo:rgb(241,241,241);
+
+    --color-scroll:rgb(35,205,64);
+    --color-scroll-hover:rgb(134,134,134)
+
+}
+
+.dark-mode{
+    --color-barra-lateral:rgb(44, 45, 49);
+
+    --color-texto:rgb(255,255,255);
+    --color-texto-menu:rgb(110,110,117);
+
+
+    --color-menu-hover: rgb(0,0,0);
+    --color-menu-hover-text: rgb(238,238,238);
+
+    --color-boton:rgb(255,255,255);
+    --color-boton-texto:rgb(0,0,0);
+
+    --color-linea: rgb(90,90,90);
+
+    --color-switch-base:rgb(39,205,64);
+    --color-switch-circulo:rgb(255,255,255);
+
+    --color-scroll:rgb(68,69,74);
+    --color-scroll-hover:rgb(85,85,85)
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'outfit', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: darkcyan;
+}
+/*--->*/
+.menu{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+}
+
+.barra-lateral{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 15px;
+    background-color: var(--color-barra-lateral);
+    transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
+    z-index: 50;
+}
+
+.mini-barra-lateral{
+    width: 80px;
+}
+
+.barra-lateral  span{
+    width: 100px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0.5s ease;
+    
+}
+
+.barra-lateral span.oculto{
+    opacity: 0;
+    width: 0;
+}
+
+/*------------NOMBRE DE LA PAGINA------------------------*/
+
+.barra-lateral .nombre-pagina{
+    width: 100%;
+    height: 45px;
+    color: var(--color-texto);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.barra-lateral .nombre-pagina ion-icon{
+    min-width: 50px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.barra-lateral .nombre-pagina span{
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+
+/*------>boton--------------*/
+
+.barra-lateral .boton{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: none;
+    border-radius: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+}
+
+.barra-lateral .boton ion-icon {
+    min-width: 50px;
+    font-size: 25px;
+}
+
+/*----------Menu navegacion->*/
+.barra-lateral .navegacion{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.barra-lateral .navegacion::-webkit-scrollbar{
+    width: 5px;
+}
+.barra-lateral .navegacion::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 5px;
+}
+.barra-lateral .navegacion::-webkit-scrollbar-thumb:hover{
+    background-color: red;
+}
+.barra-lateral .navegacion li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.barra-lateral .navegacion a{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: var(--color-texto-menu);
+}
+
+.barra-lateral .navegacion a:hover{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-text);
+}
+
+.barra-lateral .navegacion ion-icon{
+    min-width: 50px;
+    font-size: 20px;
+}
+
+/*-------------LINEA->*/
+
+.barra-lateral .linea{
+    width: 100%;
+    margin-bottom: 250px;
+    height: 2px;
+    margin-top: 15px;
+    background-color: var(--color-linea);
+
+}
+
+/*-------------MODO OSCURO->*/
+
+.barra-lateral .modo-oscuro{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra-lateral .modo-oscuro .info{
+    width: 150px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: var(--color-texto-menu);
+}
+
+.barra-lateral .modo-oscuro ion-icon{
+    width: 50px;
+    font-size: 20px;
+}
+
+/*-------------modo cambiar->*/
+
+.barra-lateral .modo-oscuro .switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.barra-lateral .modo-oscuro .base{
+    position: relative;
+    display: flex;
+    align-items: center;    width: 35px;
+    height: 20px;
+    background-color: var(--color-switch-base);
+    border-radius: 50px;
+}
+
+.barra-lateral .modo-oscuro .circulo{
+    position: absolute;
+    width: 18px;
+    height: 90%;
+    background-color: var(--color-switch-circulo);
+    border-radius: 50px;
+    left: 2px;
+    transition: left 0.5s ease;
+
+}
+
+.barra-lateral .modo-oscuro .circulo.prendido{
+    left: 15px;
+
+}
+.dark-mode main {
+    background-color: rgb(30, 30, 30); /* Cambia esto al color que desees para el fondo en modo oscuro */
+    color: white; /* Cambia el color del texto para que sea legible en el modo oscuro */
+}
+
+.dark-mode .contenedor {
+    background-color: #333; 
+    color: white;
+}
+.dark-mode .contenido  {
+    background-color:  #333; 
+    color: rgb(0, 0, 0);
+}
+.dark-mode .card {
+    background-color:  #333; 
+    color: rgb(255, 255, 255);
+}
+.dark-mode .card p {
+    
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .texto p{
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .btn-ver {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Espacio entre el botón y el texto */
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .btn-ver:hover {
+    background-color: rgb(39,205,64);
+    color: white;
+}
+
+.dark-mode button:hover {
+    background-color: rgb(39,205,64); /* Color de fondo al pasar el mouse */
+    transform: translateY(-2px); /* Mueve el botón ligeramente hacia arriba */
+}
+
+
+
+
+
+/*------------USUARIO ->*/
+
+.barra-lateral .usuario{
+    width: 100%;
+    display: flex;
+}
+
+.barra-lateral .usuario img{
+    width: 50px;
+    min-width: 50px;
+    border-radius: 10px;
+}
+
+.barra-lateral .usuario .info-usuario{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-texto);
+    overflow: hidden;
+}
+
+.barra-lateral .usuario .nombre-email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.barra-lateral .usuario .nombre{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.barra-lateral .usuario .email{
+    font-size: 13px;
+
+}
+
+.barra-lateral .usuario .ion-icon{
+    font-size: 20px;
+
+}
+
+
+
+/*-----------#############3--Main->*/
+#inbox{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-text);
+}
+
+/* Ajuste del main */
+main {
+    margin-left: 250px; /* Mantén esto si la barra lateral sigue visible */
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+}
+
+main.min-main {
+    margin-left: 80px;
+}
+
+/* Sección de contenido con max-width */
+.contenido {
+    max-width: 1200px;
+    margin: 40px auto; /* Añade margen superior e inferior para separar de otros elementos */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenido h1 {
+    font-size: 36px;
+    color: var(--color-texto);
+}
+
+.contenido p {
+    font-size: 18px;
+    color: var(--color-texto);
+    margin-bottom: 20px;
+}
+
+/* Ajuste de las tarjetas */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Para que las tarjetas se ajusten en pantallas más pequeñas */
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px; /* Asegura que cada tarjeta tenga un tamaño mínimo */
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre tarjetas en dispositivos pequeños */
+}
+
+.card-contenido {
+    display: flex;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    align-items: center;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: var(--color-texto-menu);
+}
+
+/* Estilo del botón */
+.btn-ver {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Espacio entre el botón y el texto */
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-ver:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Espacio inferior para separar del contenido siguiente */
+}
+
+/* Estilo de la imagen */
+.imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.imagen img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.imagen audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilo del texto */
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.texto h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.texto .descripcion {
+    font-size: 16px;
+    color: gray;
+}
+
+.texto .frase {
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto h1 {
+        font-size: 20px;
+    }
+
+    .texto .descripcion,
+    .texto .frase {
+        font-size: 14px;
+    }
+
+    .imagen img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%; /* Las tarjetas ocuparán el 100% en pantallas pequeñas */
+    }
+}
+
+
+/*-------####################------RESPONSIVE->*/
+
+@media (max-height: 660px){
+    .barra-lateral .nombre-pagina{
+        margin-bottom: 5px;
+    }
+    .barra-lateral .modo-oscuro{
+        margin-bottom: 3px;
+    }
+}
+
+@media (max-width: 600px){
+    .barra-lateral{
+        position: fixed;
+        left: -250px;
+    }
+    .max-barra-lateral{
+        left: 0;
+    }
+    .menu{
+        display: flex;
+    }
+    .menu ion-icon:nth-child(2){
+        display: none;
+    }
+    main{
+        margin-left: 0;
+    }
+    main.min-main{
+        margin-left: 0;
+    }
+}

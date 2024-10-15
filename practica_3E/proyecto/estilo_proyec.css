@@ -1,0 +1,126 @@
+
+
+#proyecto {
+    margin: 50px;
+}
+
+/* Sección "Proyecto" con carrusel */
+.carousel {
+    
+    position: relative;
+    overflow: hidden; /* Oculta los elementos fuera del contenedor */
+    max-width: 600px; /* Ancho máximo del carrusel */
+    margin: 20px auto; /* Centra el carrusel */
+    box-shadow: 0 4px 6px rgba(90, 90, 90, 0.1);
+}
+h2{
+    margin-bottom: 60px;
+    position: relative;
+}
+#carousel1{
+    margin-bottom: 150px;
+}
+.carousel-container {
+    display: flex; /* Alinea los elementos en fila */
+    transition: transform 0.5s ease; /* Animación suave */
+}
+
+.carousel-item {
+    min-width: 100%; /* Cada elemento ocupa todo el ancho del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    text-align: center; /* Centra el texto */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0056b3;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Estilos para la ventana emergente */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Permite que el modal se mantenga en su posición */
+    z-index: 1000; /* Se asegura que el modal esté encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Si es necesario, agrega scroll */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    color: rgb(0, 0, 0);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centro el modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalImage {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #000000; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+/* Efecto hover */
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+    transform: translateY(-2px); 
+    /* Mueve el botón ligeramente hacia arriba */
+}
+
+/* Efecto activo */
+button:active {
+    transform: translateY(1px); /* Mueve el botón hacia abajo al hacer clic */
+}

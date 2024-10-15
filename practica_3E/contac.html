@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contac/estilo_contac.css">
+</head>
+<body>
+
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+
+    </div>
+         
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <ion-icon id="cloud" name="barbell-outline"></ion-icon>
+                <span>Hger</span>
+            </div>
+
+        </div>
+
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <ion-icon name="person-outline"></ion-icon>
+                       <span>Sobre mi</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="proyec.html">
+                        <ion-icon name="albums-outline"></ion-icon>
+                       <span>Proyectos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="inbox" href="#">
+                        <ion-icon name="id-card-outline"></ion-icon>
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+
+        <div class="modo-oscuro">
+
+            <div class="info">
+                <ion-icon name="moon-outline"></ion-icon>
+                <span>Modo Oscuro</span>
+            </div>
+
+            <div class="switch">
+                <div class="base">
+                    <div class="circulo"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="usuario">
+            <img src="img/perfil.jpg" alt="">
+            <div class="info-usuario">
+                <div class="nombre-email">
+                    <span class="nombre">Hillton</span>
+                    <span class="email">critialops@gmail.com</span>
+                </div>
+                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <main>
+
+        <main>
+            <div class="formulario-contacto">
+                <h2>Formulario de Contacto</h2>
+                <div class="campo">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="campo">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" id="apellido" placeholder="Apellido" required>
+                </div>
+                <div class="campo">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" id="correo" placeholder="Correo Electrónico" required>
+                </div>
+                <div class="campo">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <input type="tel" id="telefono" placeholder="Teléfono" required>
+                </div>
+                <div class="campo">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                    <textarea id="descripcion" placeholder="Descripción" required></textarea>
+                </div>
+                <button onclick="validarDatos()">Enviar</button>
+            </div>
+    
+            <div id="resultado" style="display: none;"></div>
+        </main>
+
+        
+    </main>
+    
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+    <script src="contac/scrip_contac.js"></script>
+</body>
+</html>
